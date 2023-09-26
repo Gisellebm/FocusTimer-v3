@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Timer estilo Pomodoro desenvolvido por Giselle Brasil - Desafio Stage 5 - Rocketseat">
+    <title>Focus Timer</title>
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="src/main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <main>
+            <section id="timer" class="flex">
+                <span id="minutes">25</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </section>
+
+            <section id="controls" class="flex">
+                <button 
+                    data-action="toggleRunning"
+                    class="ph-bold ph-play-circle"
+                >
+                    
+                </button>
+
+                <button 
+                    data-action="stop"
+                    class="ph-bold ph-stop-circle"
+                >
+                    
+                </button>
+
+                <button class="ph-bold ph-plus-circle">
+                    
+                </button>
+
+                <button class="ph-bold ph-minus-circle">
+                    
+                </button>
+            </section>
+        </main>
+        <aside>
+            <button>
+                <img src="./assets/images/card1.svg" alt="Som de Floresta">
+            </button>
+
+            <button>
+                <img src="./assets/images/card2.svg" alt="Som de Chuva">
+            </button>
+
+            <button>
+                <img src="./assets/images/card3.svg" alt="Som de Cafeteria">
+            </button>
+
+            <button>
+                <img src="./assets/images/card4.svg" alt="Som de Lareira">
+            </button>
+
+        </aside>
+    </div>
+    
+</body>
+</html>
