@@ -13,8 +13,47 @@
     --bg-color: #FFF;
     --txt-color: #323238;
 
+    --bg-controls: #E1E1E6;
+
     --bg-button: #E1E1E6;
+    
     --bg-button-active: #02799D;
+    --txt-button: #E1E1E6;
+}
+
+html.dark {
+    --bg-color: hsl(194, 5%, 7%);
+    --txt-color: #FFF;
+}
+
+html.dark .ph-sun,
+html:not(.dark) .ph-moon {
+    display: none;
+}
+
+html.dark #controls button {
+    color: var(--txt-color);
+}
+
+#toggle-mode {
+    position: absolute;
+    right: 3.2rem;
+    top: 3.2rem;
+    font-size: 4.2rem;
+    line-height: 0;
+    color: var(--text-color);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 body {
@@ -35,8 +74,8 @@ body {
     width: 100%;
     max-width: 82.1rem;
     height: 33.8rem;
-    border: 0.1rem solid var(--bg-button);
 }
+
 
 main {
     display: flex;
@@ -57,6 +96,7 @@ main {
     gap: 4rem;
 }
 
+
 #controls button {
     font-size: 4.8rem;
 
@@ -73,4 +113,12 @@ button {
     border: none;
     background-color: transparent;
     cursor: pointer;
+}
+
+aside .cardSoundOn #card {
+    fill: var(--bg-button-active);
+}
+
+aside .cardSoundOn #Vector {
+    fill: var(--txt-button);
 }
