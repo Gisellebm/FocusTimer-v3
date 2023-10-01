@@ -31,7 +31,7 @@ html:not(.dark) .ph-moon {
     display: none;
 }
 
-html.dark #controls button {
+html.dark button {
     color: var(--txt-color);
 }
 
@@ -39,9 +39,10 @@ html.dark aside button {
     background-color: var(--bg-button-dark);
 }
 
-html.dark #Vector {
-    fill: var(--txt-color);
+html.dark aside button.playing{
+    background-color: var(--bg-button-active);
 }
+
 
 #toggle-mode {
     position: absolute;
@@ -103,7 +104,7 @@ button {
 }
 
 button:hover {
-    border-color: var(--bg-button-active);
+    filter: brightness(0.9);
     transform: scale(1.1);
 }
 
@@ -123,7 +124,7 @@ button:hover {
 }
 
 button.secondary {
-    background-color: var(--bg-button-active);
+    color: var(--bg-button-active);
     
 }
 
@@ -145,13 +146,17 @@ aside button {
 
 }
 
-aside button .playing{
-    background-color: var(--bg-button-active);
+.ph-tree, .ph-cloud-rain, .ph-storefront, .ph-campfire {
+    font-size: 7rem;
 }
 
-#Vector .playing {
-    fill: var(--txt-button);
+
+
+#soundsControls .playing {
+    background-color: var(--bg-button-active);
+    color: var(--txt-button);
 }
+
 
 /*  Controls */
 .running .ph-play-circle,
@@ -159,3 +164,15 @@ html:not(.running) .ph-pause-circle {
     display: none;
 }
 
+
+@media (max-width: 920px) {
+    :root {
+        font-size: 50%;
+    }
+
+    #app {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10rem;
+    }
+}

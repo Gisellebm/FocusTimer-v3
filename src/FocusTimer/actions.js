@@ -25,7 +25,6 @@ export function stopCounter() {
 }
 
 export function plusMinutes() {
-    console.log("plusMinutes Function");
     timer.incrementTimer()
     sounds.buttonPressAudio.play()
 }
@@ -36,24 +35,40 @@ export function minusMinutes() {
     sounds.buttonPressAudio.play()
 }
 
-export function PlayForestSound() {
-    state.isPlaying = document.documentElement.classList.toggle('playing')
-    console.log("PlayForest Function");
-    if (state.isPlaying) {
-        sounds.forestMusic.pause()
-        return
-    }
+/*  Sounds Controls */
+
+export function playForestSound() {
+    elements.tree.classList.toggle('playing')
     sounds.forestMusic.play()
-   
+    
+    if (!elements.tree.classList.contains('playing')) {
+        sounds.forestMusic.pause()
+    }
 }
 
 export function playRainSound() {
-    state.isPlaying = document.documentElement.classList.toggle('playing')
-    console.log("PlayForest Function");
-    if (state.isPlaying) {
-        sounds.forestMusic.pause()
-        return
+    elements.cloudRain.classList.toggle('playing')
+    sounds.rainMusic.play()
+
+    if (!elements.cloudRain.classList.contains('playing')) {
+        sounds.rainMusic.pause()
     }
-    sounds.forestMusic.play()
-   
+}
+
+export function playCoffeeShopSound() {
+    elements.coffeeShop.classList.toggle('playing')
+    sounds.coffeeShopMusic.play()
+
+    if (!elements.coffeeShop.classList.contains('playing')) {
+        sounds.coffeeShopMusic.pause()
+    }
+}
+
+export function playFireplaceSound() {
+    elements.fireplace.classList.toggle('playing')
+    sounds.fireplaceMusic.play()
+
+    if (!elements.fireplace.classList.contains('playing')) {
+        sounds.fireplaceMusic.pause()
+    }
 }
