@@ -10,20 +10,20 @@
 :root {
     font-size: clamp(40%, 1% + 2vw, 62.5%);
 
-    --bg-color: #FFF;
+    --bg-color: #FFFFFF;
     --txt-color: #323238;
 
     --bg-controls: #E1E1E6;
 
     --bg-button: #E1E1E6;
-    
+    --bg-button-dark: #29292E;
     --bg-button-active: #02799D;
-    --txt-button: #E1E1E6;
+    --txt-button: #FFFFFF;
 }
 
 html.dark {
     --bg-color: hsl(194, 5%, 7%);
-    --txt-color: #FFF;
+    --txt-color: #FFFFFF;
 }
 
 html.dark .ph-sun,
@@ -33,6 +33,14 @@ html:not(.dark) .ph-moon {
 
 html.dark #controls button {
     color: var(--txt-color);
+}
+
+html.dark aside button {
+    background-color: var(--bg-button-dark);
+}
+
+html.dark #Vector {
+    fill: var(--txt-color);
 }
 
 #toggle-mode {
@@ -87,6 +95,18 @@ main {
     display: flex;
 }
 
+button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    border-color: var(--bg-button-active);
+    transform: scale(1.1);
+}
+
 #timer {
     font-size: 12.6rem;
     font-weight: 500;
@@ -102,6 +122,11 @@ main {
 
 }
 
+button.secondary {
+    background-color: var(--bg-button-active);
+    
+}
+
 aside {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -109,16 +134,28 @@ aside {
 
 }
 
-button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+aside button {
+    width: 13.8rem;
+    height: 15.2rem;
+    border-radius: 2rem;
+    background-color: var(--bg-button);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-aside .cardSoundOn #card {
-    fill: var(--bg-button-active);
+aside button .playing{
+    background-color: var(--bg-button-active);
 }
 
-aside .cardSoundOn #Vector {
+#Vector .playing {
     fill: var(--txt-button);
 }
+
+/*  Controls */
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle {
+    display: none;
+}
+
