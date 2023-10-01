@@ -11,8 +11,12 @@
 
 > Trilha Explorer
 
+<br/>
 
-<img src="./assets/img/mobile.gif" height="400px"/>
+[Focus-Timer.webm](https://github.com/Gisellebm/FocusTimer-v3/assets/55713609/22f04583-a20d-4bab-889a-d7beefa42635)
+
+
+<img src="./assets/img/mobile.gif" height="400px" />
 
 <br/>
 
