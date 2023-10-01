@@ -24,7 +24,7 @@
 
 Projeto de um Timer Funcional, estilo Pomodoro, utilizando módulos ES6, que ajuda a organizar o código de maneira modular e reutilizável. <br/> 
 Neste aplicativo o usuário poderá adicionar ou remover 5 minutos do timer, até o limite máximo de 60 minutos e mínimo de 5 minutos. Se o usuário insistir em passar do limite, os botões de + e - serão bloqueados  e uma mensagem aparecerá na tela avisando. <br/>
-Foram implementados 4 botões com opções de músicas de temas diversos e  também, a funcionalidade de dark / light mode, onde o usuário poderá alternar entre os modos escudo e claro de acordo com a sua preferência. 
+Foram implementados 4 botões com opções de músicas de temas diversos e  também, a funcionalidade de dark / light mode, onde o usuário poderá alternar entre os modos escuro ou claro de acordo com a sua preferência. 
 <br/>
 
 ## 🚀 Recursos Utilizados
